@@ -1,12 +1,12 @@
 # Vibration-Sensing-And-Loging
 This project aims to sense and log vibration data using sensors and a microcontroller. The collected data can be used for various applications, such as machinery maintenance, structural health monitoring, and environmental sensing.
 
-#Hardware Requirement
+# Hardware Requirement
   -Vibration Sensor (SW-420)
   -Microcontroller  (ESP8266)
   -Breadboard / Jumper Wires
 
-#Software Requirement
+# Software Requirement
   -Arduino IDE: It is used to program the ESP8266 microcontroller.
   -Google Sheets: To upload the collected data from the sensor.
 
