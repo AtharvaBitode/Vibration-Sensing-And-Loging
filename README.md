@@ -12,16 +12,16 @@ This project aims to sense and log vibration data using sensors and a microcontr
 
 # Installation and Setup
 
-** Connect the vibration sensor to the microcontroller:
+## Connect the vibration sensor to the microcontroller:
   - Connect the sensor's VCC to the microcontroller's 3.3V.
   - Connect the sensor's GND to the microcontroller's GND.
   - Connect the sensor's output pins to the digital input pins of the microcontroller.
-** Install the required libraries in the Arduino IDE:
+## Install the required libraries in the Arduino IDE:
   - Open the Arduino IDE.
   - Go to Sketch > Include Library > Manage Libraries.
   - Search for and install the'ESP8266' libraries. 
   - Then select the board as 'NodeMCU 0.9'.
   - Write the required code and upload it on the ESP8266.
-**  Google Sheets:
+## Google Sheets:
   - Create a google sheets and then write the required app script so the data collected can be uploaded on the sheet.
   - Give the url of the sheet in the code which is been uploaded on the ESP8266.
