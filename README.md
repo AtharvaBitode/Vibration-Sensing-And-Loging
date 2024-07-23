@@ -22,6 +22,6 @@ This project aims to sense and log vibration data using sensors and a microcontr
   - Search for and install the'ESP8266' libraries. 
   - Then select the board as 'NodeMCU 0.9'.
   - Write the required code and upload it on the ESP8266.
-** Google Sheets:
+**  Google Sheets:
   - Create a google sheets and then write the required app script so the data collected can be uploaded on the sheet.
   - Give the url of the sheet in the code which is been uploaded on the ESP8266.
