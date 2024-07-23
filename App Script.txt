@@ -1,0 +1,39 @@
+function doGet(e) {
+  Logger.log(JSON.stringify(e)); // View parameters
+  var result = 'Ok'; // Assume success
+
+  if (Object.keys(e.parameter).length == 0) {
+    result = 'No Parameters';
+  } else {
+    var sheetId = '1HaUWoIyP3I2kyluWuSukDIY0NID1fZGJBiByk3ciGSI'; // Replace with your actual Spreadsheet ID
+    var sheet = SpreadsheetApp.openById(sheetId).getActiveSheet();
+    var newRow = sheet.getLastRow() + 1;
+    var timestamp = new Date();
+    var timeSlot = e.parameter['timeSlot']; // New parameter for time slot
+
+    for (var param in e.parameter) {
+      var vibrationValue = stripQuotes(e.parameter[param]);
+
+      switch (param) {
+        case 'vibrationValue': // Parameter for vibration data
+          sheet.getRange(newRow, 1).setValue(timestamp); // Timestamp in column A
+          sheet.getRange(newRow, 2).setValue(timeSlot); // Time slot in column B
+          sheet.getRange(newRow, 3).setValue(vibrationValue); // Vibration value in column C
+          result = 'Written on column C';
+          break;
+        default:
+          result = 'Unsupported parameter';
+      }
+    }
+  }
+
+  // Return result of operation
+  return ContentService.createTextOutput(result);
+}
+
+/**
+ * Remove leading and trailing single or double quotes
+ */
+function stripQuotes(value) {
+  return value.replace(/^["']|["']$/g, '');
+}
