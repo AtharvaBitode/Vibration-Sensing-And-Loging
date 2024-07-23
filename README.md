@@ -2,17 +2,17 @@
 This project aims to sense and log vibration data using sensors and a microcontroller. The collected data can be used for various applications, such as machinery maintenance, structural health monitoring, and environmental sensing.
 
 # Hardware Requirement
-  -Vibration Sensor (SW-420)
-  -Microcontroller  (ESP8266)
-  -Breadboard / Jumper Wires
+  - Vibration Sensor (SW-420)
+  - Microcontroller  (ESP8266)
+  - Breadboard / Jumper Wires
 
 # Software Requirement
-  -Arduino IDE: It is used to program the ESP8266 microcontroller.
-  -Google Sheets: To upload the collected data from the sensor.
+  - Arduino IDE: It is used to program the ESP8266 microcontroller.
+  - Google Sheets: To upload the collected data from the sensor.
 
 # Installation and Setup
 
-**Connect the vibration sensor to the microcontroller:
+** Connect the vibration sensor to the microcontroller:
   - Connect the sensor's VCC to the microcontroller's 3.3V.
   - Connect the sensor's GND to the microcontroller's GND.
   - Connect the sensor's output pins to the digital input pins of the microcontroller.
